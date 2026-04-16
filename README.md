@@ -28,6 +28,7 @@ El enfoque principal está en arquitectura de **microservicios y sistemas basado
 
 # Estructura del repositorio
 
+```text
 designing-distributed-systems
 │
 ├── systems
@@ -47,7 +48,7 @@ designing-distributed-systems
 │ └── system-design-template.md
 │
 └── README.md
-
+```
 
 ---
 
