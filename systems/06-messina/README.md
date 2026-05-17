@@ -39,31 +39,31 @@ The project explores software engineering concepts commonly found in production-
 ### Backend & Frontend
 
 - **Core:** Python 3.9 / Django 3.2 (Modular Monolith) + Django REST Framework.
-- **UI:** HTMX + Alpine.js + Bulma (Renderizado progresivo eficiente sin la complejidad de un SPA).
-- **Async & Data:** Redis (Broker/Cache), Celery (Workers asíncronos), PostgreSQL (Persistencia).
+- **UI:** HTMX + Alpine.js + Bulma (Efficient progressive rendering without the overhead of a SPA).
+- **Async & Data:** Redis (Broker/Cache), Celery (Asynchronous workers), PostgreSQL (Persistence).
 
 ### Project Layout
 
 ```txt
 .
 ├── apps
-│   ├── audit          # Trazabilidad e historial inmutable
-│   ├── core           # Abstracciones base y utilerías
-│   ├── inventory      # Movimientos de stock y materia prima
-│   ├── notifications  # Alertas y eventos de planta
-│   ├── production     # Ciclo de vida de Órdenes de Producción
-│   ├── quality        # Gestión de scrap, defectos y retrabajo
-│   ├── reporting      # Cálculo de métricas (OEE, Rendimiento)
-│   ├── stations       # Control de estaciones y maquinaria
-│   └── users          # Autenticación y RBAC
+│   ├── audit          # Traceability and immutable history
+│   ├── core           # Base abstractions and utilities
+│   ├── inventory      # Stock movements and raw material tracking
+│   ├── notifications  # Factory-floor events and alerts
+│   ├── production     # Production Orders lifecycle management
+│   ├── quality        # Scrap, defect, and rework management
+│   ├── reporting      # Metrics calculation (OEE, Throughput)
+│   ├── stations       # Workstation control and machinery state transitions
+│   └── users          # Authentication and RBAC
 ```
 
 ## Development Focus
 
-Estatus del proyecto: `Privado`
+Project Status: `Private`
 
-- Arquitectura Modular: Aislamiento de contextos dentro de un único despliegue.
+- **Modular Architecture:** Context isolation within a single deployment unit.
 
-- Integridad Transaccional: Control estricto sobre cambios de estado concurrentes en líneas de producción.
+- **Transactional Integrity:** Strict control over concurrent state changes across production lines.
 
-- Procesamiento Asíncrono: Delegación de tareas pesadas (mecanismos de reportes y alertas) fuera del ciclo Request/Response.
+- **Asynchronous Processing:** Offloading resource-intensive tasks (reporting engines and alert mechanisms) outside the Request/Response lifecycle.
